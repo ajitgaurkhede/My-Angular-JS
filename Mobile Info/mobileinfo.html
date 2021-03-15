@@ -1,0 +1,90 @@
+
+<html>
+	<head>
+		<title>Mobile Info Service</title>
+		<script
+		src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"
+		type = "text/javascript">
+		</script>
+		<script src = "Script.js"> </script>
+		<link href = "Style.css" rel="stylesheet"/>
+		</head>
+		<body ng-app = "mobileModule" background="https://wallpaperaccess.com/full/2293081.jpg">
+			
+			<h2>Welcome to Mobile Information Service</h2>
+			<marquee bgcolor="white">Get latest launch of mobiles details here wich is free of cost, we provides lots of details here
+				like any mobile brands Micromax, Realme, Redmi , Oppo and OnePlus
+			</marquee>
+			<br><br>
+			<div ng-controller = "mobileController" >
+		<input type="checkbox" ng-model = "showPrice" /> Show Price	
+			<br><br>
+
+				Order By :<select ng-model = "sortColumn">
+					<option value="brandName"> Brand Name ASC</option>
+					<option value="model"> Model No ASC</option>
+					<option value="date"> Date of Launch ASC</option>
+					<option value="-price"> Price in DESC</option>
+
+			</select>
+			<br><br>
+			Search : <input type="text" placeholder="Search Brand Name" ng-model = "searchText.brandName"/>
+			<br><br>
+				<table class="center">
+				<thead>
+					<tr>
+						<th> Brand Name</th>
+						<th>Model No</th>
+						<th> Date of Launch </th>
+						<th ng-show ="showPrice">Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat = "mob in mobiles | orderBy : sortColumn | filter: searchText">
+						<td>{{mob.brandName}} </td>
+						<td>{{mob.model}}</td>
+						<td>{{mob.date | date:"dd/MM/yyyy"}}</td>
+						<td ng-show ="showPrice">{{mob.price}}</td>
+					</tr>
+
+				</tbody>
+				</table>
+
+				<br> <br>
+				<b>{{msg}}</b>
+				<br><br>
+				<div >
+				<table class="center">
+					<thead>
+						<tr>
+							<th> Brand Name</th>
+							<th>Model No</th>
+							<th> Likes</th>
+							<th> Dislikes</th>
+							<th>Likes/Dislikes</th>
+						</tr>
+
+					</thead>
+					<tbody>
+						<tr ng-repeat = "x in mobiles">
+							<td>{{x.brandName}} </td> 
+							<td>{{x.model}}</td>
+							<td>{{x.likes}}</td>
+							<td>{{x.dislikes}}</td>
+							<td>
+							<input type="button" value="Like" ng-click = "incrementsLikes(x)"/>
+							<input type="button" value="DisLike" ng-click = "incrementsDisLikes(x)"/>
+							</td>
+						</tr>
+
+					</tbody>
+
+
+				</table>
+			</div>
+			</div>
+			
+		
+			
+			</body>
+			</html>	
