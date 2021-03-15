@@ -22,34 +22,35 @@ h1{
 }
 
 input[type = text]{
-    width: 90%;
-    padding: 10px;
-    font-size: 16px;
-    margin-Left: 8px;
-    border-radius: 3px;
-    border: none;
-    outline: none;
+
+        width: 90%;
+        padding: 10px;
+        font-size: 16px;
+        margin-Left: 8px;
+        border-radius: 3px;
+        border: none;
+        outline: none;
 
 }
 .search{
-    position: relative;
+        position: relative;
 
 }
 
 .search span{
-    position: absolute;
-    top: -10px;
-    right: -4px;
-    background: #e69d17;
-    padding: 20px;
-    display: flex;
-    border-radius: 100%;
-    cursor: pointer;
+        position: absolute;
+        top: -10px;
+        right: -4px;
+        background: #e69d17;
+        padding: 20px;
+        display: flex;
+        border-radius: 100%;
+        cursor: pointer;
 
 }
 ul{
-    padding: 2px;
-    list-style: none;
+        padding: 2px;
+        list-style: none;
 
 }
 ul li{
@@ -70,7 +71,7 @@ ul li i{
 
 p{
 
-    color: red;
-    text-align: center;
+            color: red;
+            text-align: center;
 
 }
