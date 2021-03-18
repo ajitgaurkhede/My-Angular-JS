@@ -1,0 +1,37 @@
+
+<html>
+	<head>
+		<script
+		src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"
+		type = "text/javascript">
+		</script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.29/angular-ui-router.min.js"></script>
+        
+		<script src = "Script.js"> </script>
+        
+        </style>
+
+		</head>
+		<body ng-app = "app">
+
+			<div class="row">
+				<div class ="col-sm-12 well">
+					header |  <a ui-sref = "root"> Home </a>
+				</div>
+				</div>
+                <div class = "row">
+                    <div class="col-sm-3 well">
+                    <ul>
+                        <li><a  ui-sref = "calc"> Calculator</a></li>
+                    </ul>
+                </div>
+                    <div class="col-sm-9 well">
+                        <div ui-view>
+
+                        </div>
+
+                    </div>
+                </div>
+			</body>
+			</html>
+			

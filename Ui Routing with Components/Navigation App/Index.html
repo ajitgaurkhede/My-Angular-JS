@@ -1,0 +1,36 @@
+
+<html>
+    <head>
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js" type="text/javascript">
+        </script>
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.29/angular-ui-router.min.js"></script>
+            <link href = "Style.css" rel="stylesheet"/>
+            <link href = "style2.css" rel="stylesheet"/>
+            <link href="styless.css" rel="stylesheet" />
+            <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <script src="state.js"> </script>
+        <script src="mainComp.js"> </script>
+        <script src="inputComp.js"> </script>
+        <script src="mobileComp.js"> </script>
+        <link href = "Stylemobile.css" rel="stylesheet"/>
+    
+    </head>
+    <body>
+        
+        <div id="main" ng-app ="myNaveApp">  
+            <div class="menu">navigation</div>  
+            <nav class="{{active}}"> 
+                <a ui-sref="mobileView" ui-sref-active="active">mobileweb</a> 
+                <a ui-sref="todoList({a:10})" class="todo" ui-sref-active="active='todo'">myToDoList</a>
+                <a ui-sref="valueList({a:50})" class="todo" ui-sref-active="active='todo'">valueList</a>
+            </nav>
+
+            <ui-view></ui-view>
+             
+        </div>  
+        
+    </body>
+    </html>

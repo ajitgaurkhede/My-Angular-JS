@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js" type="text/javascript">
+    </script>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="mainComp.js"> </script>
+    <script src="inputComp.js"> </script>
+    <script src="Script.js"> </script>
+    <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.29/angular-ui-router.min.js"></script>
+
+</head>
+
+<body ng-app="myToDoList">
+
+    <!--div class="main">
+        <h1>Todo List App</h1>
+        <main-comp message="Welocme User"></main-comp>
+    </div> -->
+    <a ui-sref="inputComp" ui-sref-active="active">mobileweb</a> 
+    <a ui-sref="mainComp" ui-sref-active="active">myToDoList</a>
+    
+	<ui-view></ui-view>
+
+</body>
+
+</html>
